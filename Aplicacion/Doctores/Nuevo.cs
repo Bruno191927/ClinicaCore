@@ -11,7 +11,6 @@ namespace Aplicacion.Doctores
     public class Nuevo
     {
         public class Ejecuta : IRequest{
-            public int DoctorId {get;set;}
             public string Nombres {get;set;}
             public string Apellidos {get;set;}
             public string Dni {get;set;}
@@ -38,6 +37,7 @@ namespace Aplicacion.Doctores
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var doctor = new Doctor{
+                    DoctorId = Guid.NewGuid(),
                     Nombres = request.Nombres,
                     Apellidos = request.Apellidos,
                     Dni = request.Dni,
