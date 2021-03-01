@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Aplicacion.Contratos;
 using Aplicacion.Doctores;
+using AutoMapper;
 using Dominio;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -81,6 +82,9 @@ namespace WebAPI
 
             //para registrar el usuario
             services.TryAddSingleton<ISystemClock,SystemClock>();
+
+            //para q funcione el mapper
+            services.AddAutoMapper(typeof(Consulta.Handler));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

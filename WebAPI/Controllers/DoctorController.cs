@@ -13,7 +13,7 @@ namespace WebAPI.Controllers
     {
 
         [HttpGet]
-        public async Task<ActionResult<List<Doctor>>> Get(){
+        public async Task<ActionResult<List<DoctorDto>>> Get(){
             return await Mediator.Send(new Consulta.ListaDoctores());
         }
 

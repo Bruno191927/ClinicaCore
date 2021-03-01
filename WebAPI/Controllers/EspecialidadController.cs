@@ -12,8 +12,8 @@ namespace WebAPI.Controllers
     public class EspecialidadController : MiControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<List<Especialidad>>> Get(){
-            return await Mediator.Send(new Consulta.ListaEspecialidad());
+        public async Task<ActionResult<List<EspecialidadDto>>> Get(){
+            return await Mediator.Send(new ConsultaEspecialidad.ListaEspecialidades());
         }
 
         [HttpPost]
