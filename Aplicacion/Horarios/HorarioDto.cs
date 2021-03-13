@@ -1,14 +1,12 @@
 using System;
-using System.Collections.Generic;
 
-namespace Dominio
+namespace Aplicacion.Horarios
 {
-    public class Horario
+    public class HorarioDto
     {
         public Guid HorarioId {get;set;}
         public string Titulo {get;set;}
         public DateTime? FechaInicio {get;set;}
         public DateTime? FechaFin {get;set;}
-        public ICollection<DoctorHorario> DoctorLink {get;set;}
     }
 }

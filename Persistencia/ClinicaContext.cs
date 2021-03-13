@@ -17,6 +17,7 @@ namespace Persistencia
 
             //con el comando
             //dotnet ef migrations add IdentityCoreInitial -p Persistencia/ -s WebAPI
+            //dotnet ef migrations add {NombreMigracion} -p Persistencia/ -s WebAPI/
             //creas los archivos de migracion
 
             modelBuilder.Entity<DoctorEspecialidad>().HasKey(ci => new{ci.DoctorId,ci.EspecialidadId});

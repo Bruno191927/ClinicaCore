@@ -1,6 +1,7 @@
 using System.Linq;
 using Aplicacion.Doctores;
 using Aplicacion.Especialidades;
+using Aplicacion.Horarios;
 using AutoMapper;
 using Dominio;
 
@@ -16,6 +17,7 @@ namespace Aplicacion
             CreateMap<Especialidad,EspecialidadDto>()
             .ForMember(x => x.Doctores,y =>y.MapFrom(z => z.DoctorLink.Select(a => a.Doctor).ToList()));
             CreateMap<Doctor,SimpleDoctorDto>();
+            CreateMap<Horario,HorarioDto>();
         }
     }
 }
